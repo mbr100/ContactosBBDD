@@ -12,9 +12,16 @@ CREATE TABLE Contacto(
     PRIMARY KEY (Id_Contacto)
 );
 
+CREATE TABLE Grupo (
+    IdGrupo INT NOT NULL AUTO_INCREMENT,
+    NombreGrupo VARCHAR(128) NOT NULL,
+    PRIMARY KEY (IdGrupo)
+);
 
+CREATE TABLE Grupo_Contacto (
+    IdGrupoContacto INT NOT NULL AUTO_INCREMENT,
+    IdGrupo INT NOT NULL,
+    Id_Contacto INT NOT NULL,
+    PRIMARY KEY (IdGrupoContacto)
+);
 
-
-
-INSERT INTO Contacto( Nombre, Apellido_1, Apellido_2, Telefono, Email) VALUES ('Mario','Borrego','Rodriguez',679037188,'mario.borrego100@gmail.com');
-INSERT INTO Contacto( Nombre, Apellido_1, Apellido_2, Telefono, Email) VALUES ('Manuel', 'Borrego','Gonzalez',615111806,'manuel.borrego100@gmail.com');
